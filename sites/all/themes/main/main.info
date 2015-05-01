@@ -7,6 +7,7 @@ core = 7.x
 stylesheets[all][] = layout.css
 stylesheets[all][] = less/home.less
 stylesheets[all][] = less/main.less
+stylesheets[all][] = less/mobile.less
 stylesheets[all][] = less/node.less
 stylesheets[all][] = less/rubriques.less
 

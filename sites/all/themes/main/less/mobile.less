@@ -1,0 +1,214 @@
+@import 'config/variables.less';
+
+@media only screen and (max-width: @tabletBreakpoint) {
+	
+	html {
+		
+		min-width: initial;
+		max-width: initial;
+		background-image: url(/sites/all/themes/main/images/corbeau-droite.gif), url(/sites/all/themes/main/images/fond4.jpg);
+	  	background-repeat: no-repeat, repeat;
+	  	background-position: right 10px, left top;
+	  	background-size: 26%, 100%;
+	}
+	
+	body, #page-wrapper, #page {
+		
+		width: initial;
+	}
+	
+	#navigation {
+		
+		display: none;
+		position: absolute;
+		top: 80px;
+		height: initial;
+		width: 100%;
+		background: white;
+		margin: 0;
+		padding: 0;
+		z-index: 100;
+		
+		.section {
+			
+			display: block;
+			
+			#main-menu {
+				
+				display: block;
+				margin: 0;
+				
+				li {
+					
+					display: block;
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					padding: 0;
+				}
+			}
+		}
+	}
+	
+	#name-and-slogan {
+		
+		margin-top: 90px;
+		
+		#site-name {
+			
+			text-align: left;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			padding-left: 5vw;
+			background: none;
+			
+			a {
+				
+				font-size: 6vw;
+			}
+		}
+	}
+	
+	#mobile-button {
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 80px;
+		height: 80px;
+		background-image: url(../images/burger.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 60% 53%;
+		
+		&.open {
+			
+			background-color: white;
+		}
+	} 
+	
+	#sidebar-second {
+		
+		display: none;
+	}
+	
+	#site-slogan {
+		
+		font-size: 4.5vw;
+		padding-bottom: 40px;
+		padding-left: 5vw;
+		text-align: left;
+	}
+	
+	#main-wrapper {
+		
+		#content {
+			
+			display: block;
+			width: 90vw;
+			margin: auto;
+			padding: 0;
+			
+		}
+	}
+	
+	#footer {
+		
+		#block-main-footer {
+			
+			position: initial;
+			padding-top: 10px;
+			
+			.content {
+				
+				.social {
+					
+					padding: 0;
+					display: initial;
+				}
+				
+				.copyright-wrapper {
+					
+					div {
+						
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	body.front {
+		
+		.view-slideshow-accueil {
+			
+			.views-slideshow-controls-bottom {
+				
+				top: 115px;
+			}
+			
+			#views_slideshow_cycle_teaser_section_slideshow_accueil-block {
+				
+				height: 255px !important;
+				
+				.views_slideshow_slide {
+					
+					transform: scale(0.5);
+					-webkit-transform: scale(0.5);
+					-moz-transform: scale(0.5);
+					-oz-transform: scale(0.5);
+					transform-origin: top left;
+					-webkit-transform-origin: top left;
+					-moz-transform-origin: top left;
+					-oz-transform-origin: top left;
+					
+					.views-field-type {
+						
+						text-align: left !important;
+						
+						span {
+							
+							font-size: 30px;
+							padding-left: 10px;
+						}
+					}
+					
+					.views-field-title {
+						
+						padding-top: 15px !important;
+						margin-bottom: -15px;
+						
+						span a {
+							
+							font-size: 30px;
+						}
+					}
+					
+					.views-field-body {
+						
+						p, span {
+							
+							font-size: 25px;
+							line-height: 25px;
+						}
+					}
+				}
+			}
+		} 
+		
+		#block-views-accueil-contenu-block {
+			
+			width: 90vw;
+			
+			.view-accueil-contenu- {
+				
+				width: 100%;
+				
+				.masonry {
+					
+					margin: auto;
+				}
+			}
+		}
+	}
+}

@@ -31,6 +31,21 @@ Drupal.behaviors.my_custom_behavior = {
 				  window.scrollTo(0, top);
 			  }
 		  }
+		  
+		  if (window.innerHeight < 640) {
+			  if ($('.mobile-button').length < 1) {
+				  $('body').prepend('<div id=mobile-button></div>');
+				  $('#mobile-button').click(function(){
+					 if ($('#mobile-button').hasClass('open')) {
+						 $('#navigation').hide();
+						 $('#mobile-button').removeClass('open');
+					 } else {
+						 $('#navigation').show();
+						 $('#mobile-button').addClass('open');
+					 }
+				  });
+			  }
+		  }
 	  });    	
     }
   }
