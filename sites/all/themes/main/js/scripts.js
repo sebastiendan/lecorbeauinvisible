@@ -32,7 +32,7 @@ Drupal.behaviors.my_custom_behavior = {
 			  }
 		  }
 		  
-		  if (window.innerHeight < 640) {
+		  if (window.innerHeight < 640 || $(window).height() < 640) {
 			  if ($('.mobile-button').length < 1) {
 				  $('body').prepend('<div id=mobile-button></div>');
 				  $('#mobile-button').click(function(){
