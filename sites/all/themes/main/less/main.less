@@ -1,0 +1,466 @@
+@import 'config/variables.less';
+
+body, #page-wrapper, #page {
+	
+	width: 1036px;
+	margin: 0 auto;
+}
+
+html {
+	
+	background-image: url('../images/corbeau-gauche.gif'), url('../images/corbeau-droite.gif'), url('../images/fond4.jpg');
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-position: left 10px, right 10px, left top;
+	background-size: 20%, 20%, 100%;
+	min-width: 1036px;
+	max-width: 1540px;
+	margin: auto;
+}
+
+#logo {
+	
+	display: none;
+}
+
+#navigation, #content {
+	
+	text-align: center;
+}
+
+#main-wrapper {
+	
+	position: relative;	
+	margin-top: 5px;
+}
+
+#content {
+	
+	width: 600px;
+	padding-left: 80px;
+	padding-right: 30px;
+}
+
+#sidebar-second {
+	
+	position: absolute;
+}
+
+p {
+	
+	font-family: Bellerose;
+	font-size: 16px;
+	line-height: 17px;
+	letter-spacing: 1px;
+}
+
+a {
+	
+	color: black;
+}
+
+a.more-link {
+	
+	text-decoration: underline !important;
+	font-style: italic;
+	font-family: Bellerose;
+	margin-left: 5px;
+	white-space: pre;
+}
+
+h2 {
+	
+	margin-top: 0;
+}
+
+h1, h2 {
+	
+	font-family: JuliusSansOne;
+}
+
+#name-and-slogan {
+	
+	text-align: center;
+	margin-top: 78px;
+	
+	#site-name {
+		
+		padding-bottom: 25px;
+		margin-bottom: 15px;
+		background: url('../images/image_background_1.png') no-repeat bottom center;
+		background-size: 13% 11px;
+	}
+}
+
+#site-name a {
+	
+	font-family: LemonMilk;
+	font-size: 4.5vw;
+	color: black;
+	text-decoration: none;
+}
+
+#site-slogan {
+	
+	font-family: JuliusSansOne;
+	font-size: 2.5vw;
+	color: #77655D;
+	padding-bottom: 100px;
+	background: url('../images/image_background_2.png') no-repeat bottom center;
+	background-size: 6% auto;
+}
+
+#block-user-login {
+	
+	display: none;
+}
+
+#breadcrumb {
+	
+	display: none;
+}
+
+#navigation { 
+
+	height: 50px;
+	width: 1036px;
+	display: table;
+	padding: 10px 0;
+	margin-top: 28px;
+	margin-bottom: 25px;
+	background-image: url('../images/barre_background_bas.png'), url('../images/barre_background_haut.png'), url('../images/image_background_3.png'), url('../images/image_background_4.png');
+	background-repeat: no-repeat;
+	background-position: bottom center, top center, 3% center, 97% center;
+	background-size: 80% 3%, 80% 2%, 6% 44%, 6% 44%;
+	
+	.section {
+		
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	h2 {
+		
+		display: none;
+	}
+}
+
+#main-menu {
+	
+	li {
+		
+		a {
+			
+			font-family: JuliusSansOne;
+			text-decoration: none;
+			color: @black-menu;
+			padding-bottom: 15px;
+			font-size: 18px;
+			
+			&:hover {
+				
+				border-bottom: 2px solid black;
+			}
+		}
+	}
+}
+
+#content, #sidebar-second {
+	
+	display: inline-block;
+}
+
+.submitted {
+	
+	display: none;	
+}
+
+body:not(.front) .masonry-item {
+	
+	h2 {
+		
+		font-family: Bellerose;
+		line-height: 27px;
+		opacity: 0.7;
+	}
+	
+	.content-type {
+		
+		display: none;
+	}
+}
+
+.view-display-id-block_1 {
+	
+	.field-name-field-subtitle {
+		
+		font-family: JuliusSansOne;
+		color: #77655D;
+		margin-bottom: 20px;
+	}
+	
+	h2 {
+		
+		margin-bottom: 0;
+		padding-bottom: 40px;
+		background: url('../images/image_background_1.png') no-repeat center 70%;
+		background-size: 90px;
+	}
+	
+	.field-name-body {
+		
+		padding-bottom: 100px;
+		background: url('../images/image_background_2.png') no-repeat center 85%;
+		background-size: 6%;
+	}
+	
+	.field-name-field-image {
+		
+		margin-bottom: 30px;
+	}
+}
+
+.blur {
+	
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-oz-filter: blur(1px);
+	filter: blur(1px);
+}
+
+.wysiwyg-title {
+	
+	font-family: LemonMilk;
+}
+
+.wysiwyg-text {
+	
+	font-family: Bellerose;
+}
+
+ul.pager {
+	
+	.pager-previous a, .pager-next a {
+		
+		font-family: Bellerose;
+		text-decoration: none;
+		color: black;
+		
+		&:hover {
+			
+			text-decoration: underline;
+		}
+	}
+	
+	.pager-current {
+		
+		font-family: Bellerose;
+	}
+	
+}
+
+.ajax-progress-throbber {
+	
+	display: none;
+}
+
+#footer {
+	
+	height: 40px;
+}
+
+#block-main-footer {
+	
+	width: 100%;
+	background: white;
+	border-top: 1px solid black;
+	z-index: 1000;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	
+	.content {
+		
+		text-align: center;
+		display: table;
+		margin: auto;
+		height: 25px;
+		line-height: 20px;
+		font-family: Bellerose;
+		font-size: 12px;
+			
+		a:not(.love) {
+			
+			color: transparent;
+			overflow: hidden;
+			text-indent: 100%;
+			white-space: nowrap;
+			background-size: 100%;
+			background-repeat: no-repeat;
+		
+			&.facebook {
+					
+				background-image: url('../images/fb-icon.png');
+				padding: 0 10px;
+			}
+			
+			&.twitter {
+				
+				background-image: url('../images/tw-icon.png');
+				position: relative;
+				top: 3px;
+				padding: 0 8px;
+			}
+			
+			&.mail {
+				
+				background-image: url('../images/email-icon.png');
+				padding: 0 8px;
+			}
+		}
+		
+		.copyright-wrapper {
+			
+			div {
+				
+				display: table-cell;
+				padding: 0px 20px;
+				vertical-align: top;
+			}
+			
+			a {
+				
+				color: black;
+			}
+		}
+		
+		.social {
+			
+			display: table-cell;
+			padding-right: 30px;
+		}
+	}
+}
+
+.social-share {
+	
+	text-align: right;
+	
+	span {
+		
+		position: relative;
+		top: -8px;
+		font-family: LemonMilk;
+		font-size: 14px;
+		vertical-align: bottom;
+	}
+	
+	a {
+			
+		color: transparent;
+		display: inline-block;
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 30px;
+		height: 30px;
+		margin: 0 5px;
+	
+		&.social-share-facebook {
+				
+			background-image: url('../images/fb-icon.png');
+		}
+		
+		&.social-share-twitter {
+			
+			background-image: url('../images/tw-icon.png');
+			position: relative;
+			top: 3px;
+		}
+	}
+}
+
+ul.links {
+	
+	li.comment-add {
+		
+		display: none;
+	}	
+}
+
+#comments, .comment-form {
+	
+	#edit-comment-body-und-0-format {
+		
+		display: none;
+	}
+	
+	.form-item-homepage {
+		
+		display: none;
+	}
+	
+	.comment {
+		
+		text-align: left;
+		background: white;
+		border: 1px solid #77655D;
+		border-radius: 4px;
+		font-family: Bellerose;
+		padding: 0 20px;
+		margin-bottom: 15px;
+		
+		>span:nth-of-type(1) {
+			
+			font-weight: bold;
+			
+			&:after {
+				
+				content: ' - ';
+			}
+		}
+		
+		.field-name-post-date {
+			
+			display: inline-block;
+			font-family: Bellerose;	
+		}
+		
+		a.permalink {
+			
+			display: none;
+			font-family: Bellerose;
+			line-height: 10px;
+		}
+		
+		.field-name-comment-body {
+			
+			margin: 0 20px;
+		}
+	}
+	
+	.comment-form {
+		
+		label, input, textarea {
+			
+			font-family: Bellerose;
+			padding: 0 10px;
+		}
+		
+		input, textarea {
+			
+			font-size: 18px;
+		}
+	}
+}
+
+#comments {
+	
+	margin-top: 100px;
+} 
+
+.feed-icon {
+
+	display: none;
+}

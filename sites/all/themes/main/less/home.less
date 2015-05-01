@@ -1,0 +1,509 @@
+body.front {
+	
+	#sidebar-second {
+		
+		margin-top: 16px;
+		
+		#block-main-social {
+			
+			.social-wrapper, .email-wrapper {
+				
+				position: relative;
+				height: 40px;
+				
+				span {
+					
+					font-family: JuliusSansOne;
+					font-size: 11px;
+					font-weight: bold;
+					margin-right: 10px;
+				}
+			}
+			
+			a {
+				
+				position: absolute;
+				top: -4px;
+				overflow: hidden;
+				text-indent: 100%;
+				white-space: nowrap;
+				width: 30px;
+				height: 30px;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				
+				&.facebook {
+					
+					background-image: url('../images/fb-icon.png');
+					left: 118px;
+				}
+				
+				&.twitter {
+					
+					background-image: url('../images/tw-icon.png');
+					left: 155px;
+					top: -1px;
+				}
+				
+				&.email {
+					
+					background-image: url('../images/email-icon.png');
+				}
+			}
+		}
+		
+		#block-views-calendrier-block {
+			
+			width: 250px;
+			background-color: white;
+			
+			h2 {
+				
+				display: none;
+			}
+			
+			.view-calendrier {
+				
+				.date-nav {
+					
+					margin: 0;
+					padding: 0;
+				}
+				
+				.date-heading {
+					
+					h3 a {
+						
+						color: black;
+						font-family: JuliusSansOne;
+						text-decoration: none;
+						font-size: 18px;
+					}
+				}
+				
+				table {
+					
+					td {
+						
+						text-align: center;
+						
+						&.today {
+							
+							border: 1px solid #77655D;
+							background-color: transparent !important;
+						}
+					}
+					
+					.days, .mini-day-off {
+						
+						font-family: JuliusSansOne;
+						padding: 8px 7px;
+						font-size: 11px;						
+					}
+					
+					td.has-events {
+						
+						background-color: #fff2ec !important;
+						font-family: JuliusSansOne;
+						line-height: 28px;
+						font-size: 11px;
+						cursor: pointer;
+					}
+				}
+				
+				.date-nav-wrapper {
+					
+					height: 40px;
+					
+					h3 {
+						
+						padding-top: 3px;
+					}
+				}
+				
+				ul.pager {
+					
+					a {
+						
+						position: absolute;
+						overflow: hidden;
+						text-indent: 100%;
+						white-space: nowrap;
+						height: 30px;
+						width: 30px;
+						background: url('../images/fleche_background.png') no-repeat;
+						background-size: 65%;
+						color: transparent;
+					}
+					
+					.date-prev a {
+						
+						left: -15px;
+						top: 8px;
+					}
+					
+					.date-next a {
+						
+						transform: rotate(180deg);
+						left: -41px;
+						top: 1px;
+					}
+					
+					.ajax-progress {
+						
+						display: none;
+					}
+				}
+			}
+			
+		}
+		
+		#block-views-cools-block-1 {
+			
+			margin: 0 !important;
+			margin-top: 25px !important;
+			height: 140px !important;
+			width: 250px !important;
+			
+			.node {
+				
+				background-size: 100%;
+				background-repeat: no-repeat;
+				padding-bottom: 50px;
+				margin-top: -40px;
+				
+				&.monday {
+					
+					background-image: url('../images/Day1_Gloomy.gif');	
+				}
+				
+				&.tuesday {
+					
+					background-image: url('../images/Day2_Oldie.gif');	
+				}
+				
+				&.wednesday {
+					
+					background-image: url('../images/Day3_Indie.gif');	
+				}
+				
+				&.thursday {
+					
+					background-image: url('../images/Day4_Heavy.gif');	
+				}
+				
+				&.friday {
+					
+					background-image: url('../images/Day5_Party.gif');	
+				}
+				
+				&.saturday {
+					
+					background-image: url('../images/Day6_Electro.gif');	
+				}
+				
+				&.sunday {
+					
+					background-image: url('../images/Day7_Chill.gif');	
+				}
+			}
+			
+			h2 {
+				
+				opacity: 0;
+			}
+			
+			a {
+				
+				padding-top: 0px;
+				padding-bottom: 90px;
+				padding-right: 56px;
+			}
+		}
+	}
+	
+	.block-views:not(#block-views-slideshow-accueil-block):not(#block-views-calendrier-block):not(#block-views-accueil-contenu-block) {
+		
+		width: 250px;
+		height: 480px;
+		display: inline-block;
+		margin: 10px;
+		
+		
+		>h2 {
+			
+			font-size: 15px;
+			text-decoration: underline;
+		}
+		
+		.node-teaser {
+			
+			h2 a {
+				
+				font-weight: bold;
+				text-decoration: none;
+				color: black;
+			}
+			
+			.field-name-body p {
+				
+				text-align: justify;
+			}
+		}
+		
+		.submitted {
+			
+			display: none;
+		}
+	}
+	
+	#page-title {
+		
+		display: none;
+	}
+	
+	#block-views-slideshow-accueil-block {
+		
+		background: url('../images/bordure.png') no-repeat bottom center;
+		background-size: 83% 10px;
+		padding-bottom: 40px;
+		margin-bottom: 19px;
+		
+		h2 {
+			
+			text-align: left;
+			font-weight: normal;
+			padding-left: 55px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			background: url('../images/crow_background_miroir.png') no-repeat center left;
+			background-size: 47px;	
+		}
+		
+	}
+	
+	.view-slideshow-accueil {
+		
+		background-color: white;
+		box-shadow: 3px 3px 10px 0px #77655D;
+		color: black;
+		position: relative;
+		
+		#views_slideshow_cycle_teaser_section_slideshow_accueil-block {
+			
+			margin: auto;
+			height: 412px !important;
+		}
+		
+		.views-field-type {
+			
+			text-align: right;
+			opacity: 0.8;
+			background-color: #E0C9BA;
+			
+			span {
+				
+				font-family: JuliusSansOne;
+				padding-right: 10px;
+			}
+		}
+		
+		.views-field-field-image {
+			
+			height: 300px;
+		}
+		
+		.views-field-title, .views-field-body {
+			
+			text-align: left;
+		}
+		
+		.views-field-title {
+			
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 5px;
+			
+			a {
+				
+				color: black;
+				font-family: Bellerose;
+				font-size: 18px;
+				line-height: 10px;
+				opacity: 0.8;
+				text-decoration: none;
+			}
+		}
+		
+		.views-field-body {
+			
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 5px;
+			
+			p {
+				
+				font-size: 14px;
+				font-family: Bellerose;
+				letter-spacing: 0.5;
+				color: black;
+				opacity: 0.8;
+			}
+		}
+		
+		.views-slideshow-controls-bottom {
+			
+			position: absolute;
+			top: 250px;
+			left: 30%;
+			width: 40%;
+			height: 30px;
+			z-index: 10;
+			color: white;
+			opacity: 0.8;
+			padding: 5px;
+			
+			#views_slideshow_controls_text_pause_slideshow_accueil-block, #views_slideshow_slide_counter_slideshow_accueil-block {
+				
+				display: none;
+			}
+			
+			.views-slideshow-pager-field-item {
+				
+				display: inline-block;
+				padding-top: 4px;
+				
+				div {
+					
+	 				color: transparent;
+					overflow: hidden;
+					text-indent: 100%;
+					white-space: nowrap;
+					height: 12px;
+					width: 12px;
+					z-index: 1000; 	
+					cursor: pointer;				
+				}
+				
+				&.active div {
+					
+					background: url('../images/bouton-actif.png') no-repeat center;
+					background-size: 100%;
+				}
+				
+				&:not(.active) div {
+					
+					background: url('../images/bouton-inactif.png') no-repeat center;
+					background-size: 100%;
+				}
+			}
+			
+			.views-slideshow-controls-text-next a, .views-slideshow-controls-text-previous a {
+				
+				display: none;				
+			}	
+		}
+	}
+	
+	#block-views-accueil-contenu-block {
+		
+		width: 145%;
+		
+		.views-row {
+			
+			width: 250px;
+		}
+	}
+	
+	.view-accueil-contenu- {
+		
+		width: 780px;
+		margin: auto;
+		
+		.views-row {
+			
+			background: white;
+			margin: 5px;
+			border-radius: 3px;
+			box-shadow: 3px 3px 10px 0px #77655D;
+			
+			.node-playlist {
+				
+				min-height: 240px;
+			}
+			
+			.node {
+				
+				padding: 10px;
+			}
+			
+			h2 {
+				
+				margin-bottom: 0;
+				line-height: 27px;
+			
+				a {
+					
+					color: black;
+					text-decoration: none;
+					font-size: 25px;
+					font-family: Bellerose;
+					opacity: 0.7;
+				}
+			}
+			
+			.field-name-body {
+				
+				text-align: justify;
+				
+				p {
+					
+					font-size: 15px;
+					line-height: 15px;
+					margin-top: 0;
+				}
+			}
+			
+			.submitted {
+				
+				text-align: left;
+			}
+			
+			.content-type {
+				
+				text-transform: uppercase;
+				font-family: LemonMilk;
+				font-size: 13px;
+				color: #77655D;
+				padding: 10px 0;
+				background-image: url('../images/image_background_3.png'), url('../images/image_background_4.png');
+				background-repeat: no-repeat;
+				background-position: 20% center, 80% center; 
+				background-size: 14% 50%;
+				margin: 10px 0;
+			}
+		}
+	}
+		
+	.views-row {				
+		
+		ul.links {
+			
+			text-align: right;
+			
+			a {
+				
+				font-family: JuliusSansOne;
+				font-size: 12px;
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+	
+	#block-system-main {
+		
+		display: none;
+	}
+}

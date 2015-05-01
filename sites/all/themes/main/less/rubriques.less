@@ -1,0 +1,326 @@
+@import 'config/variables.less';
+
+.page-news, .page-chroniques, .page-playlists, .page-endroits, .page-agenda, .page-cools, .page-ubercools {
+	
+	#content {
+		
+		width: 90%;
+		margin: auto;
+		display: block;
+		padding: 0;
+		
+		h1.title {
+			
+			display: none;
+		}
+		
+		.block-views {
+			
+			>h2 {
+				
+				display: none;
+			}
+		}
+		
+		.view:not(.view-display-id-block_1) {
+			
+			.view-content.masonry {
+				
+				max-width: 780px;
+				margin: auto;
+			}
+			
+			.views-row {
+				
+				background: white;
+				margin: 5px;
+				padding: 10px;
+				border-radius: 3px;
+				box-shadow: 3px 3px 10px 0px #77655D;
+				width: 250px;
+				
+				.field-name-body {
+					
+					text-align: justify;
+				}
+				
+				.links {
+					
+					display: none;
+				}
+			}
+		}
+		
+		a {
+			
+			color: black;
+			text-decoration: none;
+		}		
+	}
+}
+
+.page-cools, .page-ubercools {
+
+	.views-row {	
+		
+		padding: 0 !important;
+		
+		.node {
+			
+			padding: 10px;
+		}
+	}
+}
+
+.page-agenda {
+	
+	#block-main-agenda-legend {
+		
+		margin-left: 100px;
+		margin-bottom: 30px;
+		
+		.week-legend, .other-legend {
+			
+			display: inline-block;
+			width: 180px;
+		}
+		
+		.month-legend {
+			
+			display: inline-block;
+			width: 155px;
+		}
+		
+		.week-legend .colour{
+			
+			background-color: #ffdccc;
+		}
+		
+		.month-legend .colour{
+			
+			background-color: #fff2ec;
+		}
+		
+		.other-legend .colour{
+			
+			background-color: white;
+		}
+		
+		.colour {
+			
+			width: 40px;
+			float: left;
+			height: 15px;
+			box-shadow: 3px 3px 10px -2px #77655D;
+			border-radius: 1px;
+		}
+		
+		.legend-label {
+			
+			float: left;
+			margin-left: 10px;
+			font-family: LemonMilk;
+			font-size: 12px;
+			position: relative;
+			top: 3px;
+			opacity: 0.7;
+		}
+	}
+	
+	.views-row {
+		
+		padding: 0 !important;
+		
+		.node-agenda {
+			
+			&.this-week {
+		
+				background-color: @this-week;
+			}
+			
+			&.this-month {
+				
+				background-color: @this-month;
+			}
+		}
+	}
+}
+	
+.node-agenda {
+	
+	padding: 10px;
+	
+	h2 {
+		
+		margin-bottom: 10px;
+	}
+	
+	.field-name-field-date, .field-name-field-salle, .field-name-field-style, .field-name-field-prix, .field-name-field-pourquoi-y-aller {
+		
+		font-family: JuliusSansOne;
+		font-size: 17px;
+	}
+}
+
+.node-endroit {
+	
+	.field-name-field-arrondissement {
+		
+		font-family:LemonMilk;
+		opacity: 0.7;
+		text-align: center;
+		
+		>div {
+			
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+
+.node {
+	
+	.media-youtube-video {
+		
+		text-align: center;
+	}
+}
+
+.node-chronique {
+	
+	.field-name-field-subtitle {
+		
+		font-family: Bellerose;
+		font-weight: bold;
+	}
+}
+
+body.node-type-cool, body.node-type-ubercool, body.node-type-news {
+	
+	.field-name-field-date {
+		
+		text-align: left;
+		font-family: JuliusSansOne;
+		position: relative;
+		top: -23px;
+		z-index: -1;
+	}
+}
+
+.node-cool.node-teaser, .node-ubercool.node-teaser {
+	
+	.field-name-field-date {
+		
+		font-family: JuliusSansOne;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+
+.node-cool.node-teaser {
+	
+	.field-name-field-category {
+		
+		font-family: JuliusSansOne;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+
+.node-cool:not(.node-teaser) {
+	
+	.field-name-field-category {
+		
+		font-family: JuliusSansOne;
+		font-size: 14px;
+		float: left;
+		margin-bottom: 10px;
+	}
+}
+
+.node-news {
+	
+	.field-name-field-date {
+		
+		font-family: JuliusSansOne;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+
+body.node-type-agenda {
+	
+	.week-legend, .month-legend, .other-legend {
+		
+		display: none;
+	}
+	
+	.field-name-field-date, .field-name-field-salle {
+		
+		font-size: 17px;
+		color: black;
+		font-family: JuliusSansOne;
+	}
+	
+	.field-label {
+		
+		font-weight: bold;
+	}
+}
+
+body.page-comment {
+	
+	#content {
+		
+		margin: auto;
+		display: block;
+		
+		.field-name-body {
+			
+			text-align: justify;
+		}
+	}
+}
+
+body.page-cools {
+	
+	#edit-field-category-tid-wrapper {
+		
+		float: none;
+		margin-left: 15px;
+		
+		> label {
+			
+			display: none;
+		}
+		
+		.form-type-radio {
+			
+			display: inline-block;
+			
+			input {
+				
+				display: none;
+			}
+			
+			input[checked] + label {
+				
+				background-color: #fff2ec;
+			}
+			
+			label {
+				
+				display: block;
+				width: 105px;
+	  			height: 40px;
+	  			line-height: 40px;
+	  			background-color: white;
+	  			border-radius: 3px;
+	  			box-shadow: 3px 3px 10px 0px #77655D;
+	  			cursor: pointer;
+	  			font-family: JuliusSansOne;
+	  			font-size: 12px;
+			}
+		}
+	}
+}

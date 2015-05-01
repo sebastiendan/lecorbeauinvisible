@@ -1,0 +1,144 @@
+<?php 
+
+function main_init() {
+	
+	drupal_add_js(libraries_get_path('imagesloaded') . '/jquery.imagesloaded.js', array('group' => JS_THEME, 'every_page' => TRUE));
+	
+	$oldAgenda = db_query("SELECT nid FROM node WHERE type = 'agenda'");
+	$today = date('Y-m-d', time());
+	
+	foreach($oldAgenda as $row) {
+		$agenda = node_load($row->nid);
+		$date = explode(' ', $agenda->field_date[LANGUAGE_NONE][0]['value']);
+		if ($date[0] < $today) {
+			node_delete($row->nid);
+		}
+	}
+}
+
+function main_block_info(){
+	
+	return array (
+		'social' => array (
+			'info' => t('Main: social'),
+			'cache' => DRUPAL_NO_CACHE,
+		),
+		'agenda-legend' => array (
+			'info' => t('Main: agenda-legend'),
+			'cache' => DRUPAL_NO_CACHE,
+		),
+		'footer' => array (
+		'info' => t('Main: footer'),
+		'cache' => DRUPAL_NO_CACHE,
+		),
+	);
+}
+
+function main_block_view($delta = ''){
+	global $base_url;
+	global $base_path;
+	global $user;
+
+	$block = array();
+
+	switch ($delta)
+	{
+		case 'social':
+			$vars = array();
+			$block['content'] = theme('block_social', $vars);
+			break;
+			
+		case 'agenda-legend':
+			$block['content'] = theme('block-agenda-legend');
+			break;
+			
+		case 'footer':
+			$block['content'] = theme('footer');
+			break;
+	}
+	return $block;
+}
+
+function main_theme($existing, $type, $theme, $path){
+	return array(
+		'block_social' => array (
+		'path' => drupal_get_path('module', 'main') . '/templates',
+		'template' => 'block-social',
+		),
+		'block-agenda-legend' => array (
+		'path' => drupal_get_path('module', 'main') . '/templates',
+		'template' => 'block-agenda-legend',
+		),
+		'footer' => array (
+		'path' => drupal_get_path('module', 'main') . '/templates',
+		'template' => 'footer',
+		)
+	);
+}
+
+function main_node_view($node, $view_mode, $langcode) {	
+	if ($view_mode == 'teaser') {
+		$node->content['content_type'] = array(
+				'#markup' => '<div class="content-type">' . $node->type . '</div>',
+				'#weight' => -1,
+		);
+	}
+	
+	if ($node->type == 'endroit' && $view_mode == 'full') {
+		$node->content['field_arrondissement']['#title'] = 'Quartier';
+	}
+}
+
+function main_preprocess_node(&$vars) {
+	if ($vars['type'] == 'agenda') {
+		$date = $vars['field_date'][0]['value'];
+		$date = explode(' ', $date);
+		$date = $date[0];		
+		$today = date('Y-m-d');
+		$week = rangeWeek($today);
+		$month = rangeMonth($today);
+
+		if ($week['start'] <= $date && $date <= $week['end']) {
+			$vars['classes_array'][] = 'this-week';
+		}
+		
+		if ($month['start'] <= $date && $date <= $month['end'] && !($week['start'] <= $date && $date <= $week['end'])) {
+			$vars['classes_array'][] = 'this-month';
+		}
+	}
+	
+	if ($vars['type'] == 'cool' && $vars['view_mode'] == 'teaser_cool_home') {
+		$vars['classes_array'][] = strtolower(date('l', time()));
+	}
+}
+
+function rangeMonth($datestr) {
+	date_default_timezone_set(date_default_timezone_get());
+	$dt = strtotime($datestr);
+	$res['start'] = date('Y-m-d', strtotime('first day of this month', $dt));
+	$res['end'] = date('Y-m-d', strtotime('last day of this month', $dt));
+	return $res;
+}
+
+function rangeWeek($datestr) {
+	date_default_timezone_set(date_default_timezone_get());
+	$dt = strtotime($datestr);
+	$res['start'] = date('N', $dt)==1 ? date('Y-m-d', $dt) : date('Y-m-d', strtotime('last monday', $dt));
+	$res['end'] = date('N', $dt)==7 ? date('Y-m-d', $dt) : date('Y-m-d', strtotime('next sunday', $dt));
+	return $res;
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function main_wysiwyg_editor_settings_alter(&$settings, $context) {
+	if ($context['profile']->editor == 'ckeditor') {
+		$settings['allowedContent'] = TRUE;
+	}
+}
+
+function main_form_alter(&$form, &$form_state, $form_id) {
+	if ($form['#id'] == 'comment-form') {
+		$form['comment_body'][LANGUAGE_NONE][0]['#title'] = t('Comment');
+	}
+}
