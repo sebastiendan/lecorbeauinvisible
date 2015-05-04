@@ -4,4 +4,6 @@
 !/sites/all
 /sites/all/*
 !/sites/all/modules
+/sites/all/modules/*
+!/sites/all/modules/custom
 !/sites/all/themes
