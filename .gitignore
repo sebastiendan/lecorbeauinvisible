@@ -5,5 +5,5 @@
 /sites/all/*
 !/sites/all/modules
 /sites/all/modules/*
-!/sites/all/modules/custom
+!/sites/all/modules/main
 !/sites/all/themes
