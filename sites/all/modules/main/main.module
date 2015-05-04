@@ -11,7 +11,7 @@ function main_init() {
 		$agenda = node_load($row->nid);
 		$date = explode(' ', $agenda->field_date[LANGUAGE_NONE][0]['value']);
 		if ($date[0] < $today) {
-			node_delete($row->nid) ;
+			node_delete($row->nid);
 		}
 	}
 }
