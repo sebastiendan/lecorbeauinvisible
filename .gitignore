@@ -7,3 +7,4 @@
 /sites/all/modules/*
 !/sites/all/modules/main
 !/sites/all/themes
+/sites/all/themes/ember
